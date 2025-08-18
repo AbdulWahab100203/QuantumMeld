@@ -95,7 +95,7 @@ const About = () => {
             {/* Mission */}
             <div className="fade-in">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center mr-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-accent-purple to-accent-teal rounded-xl flex items-center justify-center mr-4">
                   <Target size={24} className="text-white" />
                 </div>
                 <h2 className="text-3xl font-bold">Our Mission</h2>
@@ -169,7 +169,7 @@ const About = () => {
                 <CardContent className="p-6 text-center">
                   <Avatar className="w-20 h-20 mx-auto mb-4">
                     <AvatarImage src={`/team/${member.avatar}.jpg`} />
-                    <AvatarFallback className="bg-gradient-to-br from-primary to-accent text-white font-bold text-lg">
+                    <AvatarFallback className="bg-gradient-to-br from-accent-purple to-accent-teal text-white font-bold text-lg">
                       {member.avatar}
                     </AvatarFallback>
                   </Avatar>
