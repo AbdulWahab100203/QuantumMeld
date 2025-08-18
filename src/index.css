@@ -2,41 +2,77 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* AI Company Design System - Professional, Modern, Futuristic */
 
 @layer base {
   :root {
+    /* Core Backgrounds */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    --foreground: 220 90% 8%;
+    
+    /* Cards & Surfaces */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 220 90% 8%;
+    
+    /* Popovers */
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --popover-foreground: 220 90% 8%;
+    
+    /* Brand Colors - Deep Blue Primary */
+    --primary: 220 90% 25%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 220 90% 20%;
+    
+    /* Accent Colors - Teal & Purple */
+    --accent-teal: 188 85% 45%;
+    --accent-teal-hover: 188 85% 40%;
+    --accent-purple: 260 85% 55%;
+    --accent-purple-hover: 260 85% 50%;
+    
+    /* Secondary Colors */
+    --secondary: 220 20% 96%;
+    --secondary-foreground: 220 90% 15%;
+    
+    /* Muted Colors */
+    --muted: 220 15% 95%;
+    --muted-foreground: 220 20% 50%;
+    
+    /* Accent System */
+    --accent: 188 85% 45%;
+    --accent-foreground: 0 0% 100%;
+    
+    /* Status Colors */
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 120 70% 45%;
+    --success-foreground: 0 0% 100%;
+    
+    /* Borders & Inputs */
+    --border: 220 15% 90%;
+    --input: 220 15% 95%;
+    --ring: 220 90% 25%;
+    
+    /* Design System Variables */
+    --radius: 0.75rem;
+    --radius-sm: 0.5rem;
+    --radius-lg: 1rem;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220 90% 25%), hsl(188 85% 45%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 90% 25%) 0%, hsl(260 85% 55%) 50%, hsl(188 85% 45%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 15% 98%));
+    --gradient-subtle: linear-gradient(180deg, hsl(220 15% 98%), hsl(0 0% 100%));
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(220 90% 25% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(220 90% 25% / 0.1), 0 2px 4px -1px hsl(220 90% 25% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(220 90% 25% / 0.1), 0 4px 6px -2px hsl(220 90% 25% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(220 90% 25% / 0.1), 0 10px 10px -5px hsl(220 90% 25% / 0.04);
+    --shadow-glow: 0 0 20px hsl(188 85% 45% / 0.3);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,41 +92,51 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Dark Mode - Professional Dark Theme */
+    --background: 220 90% 4%;
+    --foreground: 0 0% 98%;
+    
+    --card: 220 50% 8%;
+    --card-foreground: 0 0% 95%;
+    
+    --popover: 220 50% 8%;
+    --popover-foreground: 0 0% 95%;
+    
+    --primary: 188 85% 45%;
+    --primary-foreground: 220 90% 4%;
+    --primary-hover: 188 85% 50%;
+    
+    --accent-teal: 188 85% 50%;
+    --accent-teal-hover: 188 85% 55%;
+    --accent-purple: 260 85% 60%;
+    --accent-purple-hover: 260 85% 65%;
+    
+    --secondary: 220 30% 12%;
+    --secondary-foreground: 0 0% 90%;
+    
+    --muted: 220 20% 10%;
+    --muted-foreground: 220 15% 65%;
+    
+    --accent: 188 85% 45%;
+    --accent-foreground: 220 90% 4%;
+    
+    --destructive: 0 85% 65%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 120 70% 50%;
+    --success-foreground: 0 0% 100%;
+    
+    --border: 220 30% 15%;
+    --input: 220 30% 12%;
+    --ring: 188 85% 45%;
+    
+    /* Dark Mode Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220 90% 15%), hsl(188 85% 25%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 90% 8%) 0%, hsl(260 85% 25%) 50%, hsl(188 85% 25%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(220 50% 8%), hsl(220 30% 12%));
+    --gradient-subtle: linear-gradient(180deg, hsl(220 30% 8%), hsl(220 50% 6%));
+    
+    /* Dark Mode Shadows */
+    --shadow-glow: 0 0 25px hsl(188 85% 45% / 0.4);
   }
 }
 
@@ -101,5 +147,108 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    scroll-behavior: smooth;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary-hover));
+  }
+}
+
+@layer components {
+  /* Hero Gradient Background */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  /* Card Gradient */
+  .card-gradient {
+    background: var(--gradient-card);
+  }
+  
+  /* Glass Effect */
+  .glass {
+    backdrop-filter: blur(10px);
+    background: hsl(var(--background) / 0.8);
+    border: 1px solid hsl(var(--border) / 0.2);
+  }
+  
+  /* Hover Animations */
+  .hover-lift {
+    transition: var(--transition-smooth);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+  }
+  
+  /* Glow Effects */
+  .glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  /* Button Variants */
+  .btn-hero {
+    background: var(--gradient-primary);
+    color: hsl(var(--primary-foreground));
+    transition: var(--transition-smooth);
+  }
+  
+  .btn-hero:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+  }
+  
+  /* Text Gradients */
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Animations */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  .fade-in-delay-1 { animation-delay: 0.1s; }
+  .fade-in-delay-2 { animation-delay: 0.2s; }
+  .fade-in-delay-3 { animation-delay: 0.3s; }
+  .fade-in-delay-4 { animation-delay: 0.4s; }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Service Card Hover */
+  .service-card {
+    transition: var(--transition-smooth);
+    border: 1px solid hsl(var(--border));
+  }
+  
+  .service-card:hover {
+    border-color: hsl(var(--accent));
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
   }
 }
