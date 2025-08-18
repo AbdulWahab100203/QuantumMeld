@@ -3,32 +3,32 @@ import { ArrowRight, Sparkles, Zap, Brain } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center hero-gradient overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-slate-900 via-indigo-950 to-slate-900 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
-        {/* Animated Orbs */}
-        <div className="absolute top-20 left-10 w-32 h-32 bg-accent-teal/30 rounded-full blur-3xl animate-pulse glow" />
-        <div className="absolute top-40 right-20 w-40 h-40 bg-accent-purple/25 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="absolute bottom-40 left-1/4 w-36 h-36 bg-primary/25 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
-        <div className="absolute top-1/2 right-1/4 w-28 h-28 bg-accent-teal/20 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '3s' }} />
+        {/* Animated Orbs with updated colors */}
+        <div className="absolute top-20 left-10 w-32 h-32 bg-blue-500/20 rounded-full blur-3xl animate-pulse glow" />
+        <div className="absolute top-40 right-20 w-40 h-40 bg-indigo-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute bottom-40 left-1/4 w-36 h-36 bg-violet-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/2 right-1/4 w-28 h-28 bg-cyan-500/20 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '3s' }} />
         
-        {/* Floating Geometric Shapes */}
-        <div className="absolute top-32 left-1/4 text-accent-teal/40 animate-bounce hover-lift" style={{ animationDelay: '0.5s' }}>
+        {/* Floating Icons with updated colors */}
+        <div className="absolute top-32 left-1/4 text-blue-400/40 animate-bounce hover-lift" style={{ animationDelay: '0.5s' }}>
           <Brain size={40} />
         </div>
-        <div className="absolute top-48 right-1/3 text-accent-purple/40 animate-bounce hover-lift" style={{ animationDelay: '1.5s' }}>
+        <div className="absolute top-48 right-1/3 text-violet-400/40 animate-bounce hover-lift" style={{ animationDelay: '1.5s' }}>
           <Zap size={36} />
         </div>
-        <div className="absolute bottom-48 right-1/4 text-primary/40 animate-bounce hover-lift" style={{ animationDelay: '2.5s' }}>
+        <div className="absolute bottom-48 right-1/4 text-cyan-400/40 animate-bounce hover-lift" style={{ animationDelay: '2.5s' }}>
           <Sparkles size={38} />
         </div>
         
-        {/* Aesthetic Grid Pattern */}
-        <div className="absolute inset-0 opacity-10">
+        {/* Updated Gradient Overlay */}
+        <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 25% 25%, hsl(340 82% 67% / 0.3) 0%, transparent 50%),
-                             radial-gradient(circle at 75% 75%, hsl(267 83% 58% / 0.3) 0%, transparent 50%),
-                             radial-gradient(circle at 50% 50%, hsl(25 95% 70% / 0.3) 0%, transparent 50%)`
+            backgroundImage: `radial-gradient(circle at 25% 25%, hsl(221 83% 53% / 0.4) 0%, transparent 50%),
+                             radial-gradient(circle at 75% 75%, hsl(250 82% 45% / 0.4) 0%, transparent 50%),
+                             radial-gradient(circle at 50% 50%, hsl(199 89% 48% / 0.4) 0%, transparent 50%)`
           }} />
         </div>
       </div>
@@ -36,13 +36,13 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/15 backdrop-blur-md border border-white/30 text-white mb-8 fade-in hover-lift glow">
+          {/* <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/15 backdrop-blur-md border border-white/30 text-white mb-8 fade-in hover-lift glow">
             <Sparkles size={18} className="mr-3 animate-pulse" />
             <span className="text-sm font-semibold tracking-wide">✨ Next-Generation AI Solutions</span>
-          </div>
+          </div> */}
 
           {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 fade-in fade-in-delay-1">
+          <h1 className="text-5xl mt-10 md:text-7xl font-bold text-white mb-6 fade-in fade-in-delay-1">
             Transform Your Business with{' '}
             <span className="text-transparent bg-gradient-to-r from-accent-teal to-accent-purple bg-clip-text">
               Intelligent AI
@@ -64,7 +64,7 @@ const HeroSection = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-white/40 text-white hover:bg-white/20 text-lg px-10 py-7 backdrop-blur-sm hover-lift font-semibold"
+              className="border-white/40 text-black hover:bg-white/20 text-lg px-10 py-7 backdrop-blur-sm hover-lift font-semibold"
             >
               ▶️ Watch Demo
             </Button>

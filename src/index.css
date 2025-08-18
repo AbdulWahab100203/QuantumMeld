@@ -18,16 +18,17 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 90% 8%;
     
-    /* Brand Colors - Aesthetic Purple Primary */
-    --primary: 267 83% 58%;
-    --primary-foreground: 0 0% 100%;
-    --primary-hover: 267 83% 65%;
-    
-    /* Accent Colors - Pink & Orange */
-    --accent-teal: 340 82% 67%;
-    --accent-teal-hover: 340 82% 72%;
-    --accent-purple: 25 95% 70%;
-    --accent-purple-hover: 25 95% 75%;
+/* Core Colors */
+--primary: 222 20% 12%;           /* Deep navy (background/base) */
+--primary-foreground: 0 0% 100%;  /* Pure white text */
+--primary-hover: 220 90% 56%;     /* Bright tech blue hover */
+
+/* Accent Colors */
+--accent-teal: 190 85% 45%;        /* Modern teal */
+--accent-teal-hover: 190 85% 55%;  /* Brighter teal hover */
+--accent-purple: 260 75% 60%;      /* Sleek indigo-purple */
+--accent-purple-hover: 260 75% 67%;/* Lighter indigo hover */
+
     
     /* Secondary Colors */
     --secondary: 220 20% 96%;
@@ -58,8 +59,8 @@
     --radius-lg: 1rem;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(267 83% 58%), hsl(340 82% 67%));
-    --gradient-hero: linear-gradient(135deg, hsl(267 83% 45%) 0%, hsl(340 82% 60%) 50%, hsl(25 95% 70%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(230 83% 65%), hsl(199 89% 48%));
+    --gradient-hero: linear-gradient(135deg, hsl(230 83% 45%) 0%, hsl(199 89% 48%) 50%, hsl(190 85% 50%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(340 15% 98%));
     --gradient-subtle: linear-gradient(180deg, hsl(340 15% 98%), hsl(0 0% 100%));
     
@@ -130,8 +131,8 @@
     --ring: 340 82% 67%;
     
     /* Dark Mode Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(267 83% 35%), hsl(340 82% 45%));
-    --gradient-hero: linear-gradient(135deg, hsl(267 83% 15%) 0%, hsl(340 82% 35%) 50%, hsl(25 95% 55%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(230 83% 35%), hsl(199 89% 38%));
+    --gradient-hero: linear-gradient(135deg, hsl(230 83% 25%) 0%, hsl(199 89% 28%) 50%, hsl(190 85% 30%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(267 50% 8%), hsl(340 30% 12%));
     --gradient-subtle: linear-gradient(180deg, hsl(267 30% 8%), hsl(340 50% 6%));
     
@@ -250,5 +251,62 @@
     border-color: hsl(var(--accent));
     transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    @apply fixed top-0 left-0 right-0 z-50 
+           bg-white 
+           border-b border-slate-100
+           shadow-sm
+           transition-all duration-200;
+  }
+
+  .navbar-container {
+    @apply container mx-auto px-6 py-4 
+           flex items-center justify-between
+           max-w-7xl;
+  }
+
+  .nav-link {
+    @apply text-slate-600 hover:text-slate-900
+           px-4 py-2 rounded-lg
+           transition-colors duration-200
+           text-sm font-medium
+           hover:bg-slate-50;
+  }
+
+  .nav-link.active {
+    @apply text-slate-900 bg-slate-50
+           font-semibold;
+  }
+
+  .nav-cta {
+    @apply bg-primary text-primary-foreground
+           px-6 py-2 rounded-full
+           hover:bg-primary/90
+           transition-all duration-200
+           text-sm font-semibold
+           shadow-sm hover:shadow-md
+           hover:-translate-y-0.5;
+  }
+
+  /* Mobile Navigation */
+  .mobile-nav {
+    @apply fixed top-[4rem] left-0 right-0
+           bg-white 
+           border-b border-slate-100
+           shadow-sm
+           p-4 space-y-2
+           transform transition-all duration-200;
+  }
+
+  .mobile-nav-link {
+    @apply block w-full
+           text-slate-600 hover:text-slate-900
+           px-4 py-3 rounded-lg
+           transition-colors duration-200
+           text-sm font-medium
+           hover:bg-slate-50;
   }
 }

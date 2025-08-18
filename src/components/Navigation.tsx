@@ -35,8 +35,8 @@ const Navigation = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
+            <Link to="/" className="flex items-center space-x-3">
+              <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-cyan-400 rounded-lg flex items-center justify-center shadow-md">
               <span className="text-white font-bold text-sm">AI</span>
             </div>
             <span className="text-xl font-bold text-gradient">NeuralTech</span>
@@ -49,15 +49,15 @@ const Navigation = () => {
                 key={item.name}
                 to={item.href}
                 className={cn(
-                  'relative py-2 px-3 text-sm font-medium transition-colors hover:text-primary',
+                  'relative py-2 px-3 text-sm font-medium transition-colors',
                   location.pathname === item.href
-                    ? 'text-primary'
-                    : 'text-foreground/80'
+                    ? 'text-slate-400'  // Active link color
+                    : 'text-slate-400 hover:text-slate-900' // Inactive link color with hover
                 )}
               >
                 {item.name}
                 {location.pathname === item.href && (
-                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-accent" />
+                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-accent-teal to-accent-purple" />
                 )}
               </Link>
             ))}

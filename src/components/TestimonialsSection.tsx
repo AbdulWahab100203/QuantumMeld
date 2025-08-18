@@ -102,7 +102,9 @@ const TestimonialsSection = () => {
                       <div className="flex items-center justify-center space-x-4">
                         <Avatar className="w-12 h-12">
                           <AvatarImage src={`/testimonials/${testimonial.avatar}.jpg`} />
-                          <AvatarFallback className="bg-gradient-to-br from-primary to-accent text-white font-semibold">
+                          <AvatarFallback 
+                            className="bg-gradient-to-br from-accent-purple to-accent-teal text-white font-semibold"
+                          >
                             {testimonial.avatar}
                           </AvatarFallback>
                         </Avatar>
