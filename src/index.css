@@ -18,16 +18,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 90% 8%;
     
-    /* Brand Colors - Deep Blue Primary */
-    --primary: 220 90% 25%;
+    /* Brand Colors - Aesthetic Purple Primary */
+    --primary: 267 83% 58%;
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 220 90% 20%;
+    --primary-hover: 267 83% 65%;
     
-    /* Accent Colors - Teal & Purple */
-    --accent-teal: 188 85% 45%;
-    --accent-teal-hover: 188 85% 40%;
-    --accent-purple: 260 85% 55%;
-    --accent-purple-hover: 260 85% 50%;
+    /* Accent Colors - Pink & Orange */
+    --accent-teal: 340 82% 67%;
+    --accent-teal-hover: 340 82% 72%;
+    --accent-purple: 25 95% 70%;
+    --accent-purple-hover: 25 95% 75%;
     
     /* Secondary Colors */
     --secondary: 220 20% 96%;
@@ -38,7 +38,7 @@
     --muted-foreground: 220 20% 50%;
     
     /* Accent System */
-    --accent: 188 85% 45%;
+    --accent: 340 82% 67%;
     --accent-foreground: 0 0% 100%;
     
     /* Status Colors */
@@ -58,17 +58,17 @@
     --radius-lg: 1rem;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(220 90% 25%), hsl(188 85% 45%));
-    --gradient-hero: linear-gradient(135deg, hsl(220 90% 25%) 0%, hsl(260 85% 55%) 50%, hsl(188 85% 45%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 15% 98%));
-    --gradient-subtle: linear-gradient(180deg, hsl(220 15% 98%), hsl(0 0% 100%));
+    --gradient-primary: linear-gradient(135deg, hsl(267 83% 58%), hsl(340 82% 67%));
+    --gradient-hero: linear-gradient(135deg, hsl(267 83% 45%) 0%, hsl(340 82% 60%) 50%, hsl(25 95% 70%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(340 15% 98%));
+    --gradient-subtle: linear-gradient(180deg, hsl(340 15% 98%), hsl(0 0% 100%));
     
     /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(220 90% 25% / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(220 90% 25% / 0.1), 0 2px 4px -1px hsl(220 90% 25% / 0.06);
-    --shadow-lg: 0 10px 15px -3px hsl(220 90% 25% / 0.1), 0 4px 6px -2px hsl(220 90% 25% / 0.05);
-    --shadow-xl: 0 20px 25px -5px hsl(220 90% 25% / 0.1), 0 10px 10px -5px hsl(220 90% 25% / 0.04);
-    --shadow-glow: 0 0 20px hsl(188 85% 45% / 0.3);
+    --shadow-sm: 0 1px 2px 0 hsl(267 83% 58% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(267 83% 58% / 0.1), 0 2px 4px -1px hsl(267 83% 58% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(267 83% 58% / 0.1), 0 4px 6px -2px hsl(267 83% 58% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(267 83% 58% / 0.1), 0 10px 10px -5px hsl(267 83% 58% / 0.04);
+    --shadow-glow: 0 0 30px hsl(340 82% 67% / 0.4);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -102,14 +102,14 @@
     --popover: 220 50% 8%;
     --popover-foreground: 0 0% 95%;
     
-    --primary: 188 85% 45%;
-    --primary-foreground: 220 90% 4%;
-    --primary-hover: 188 85% 50%;
+    --primary: 340 82% 67%;
+    --primary-foreground: 267 83% 8%;
+    --primary-hover: 340 82% 72%;
     
-    --accent-teal: 188 85% 50%;
-    --accent-teal-hover: 188 85% 55%;
-    --accent-purple: 260 85% 60%;
-    --accent-purple-hover: 260 85% 65%;
+    --accent-teal: 340 82% 72%;
+    --accent-teal-hover: 340 82% 77%;
+    --accent-purple: 25 95% 75%;
+    --accent-purple-hover: 25 95% 80%;
     
     --secondary: 220 30% 12%;
     --secondary-foreground: 0 0% 90%;
@@ -117,8 +117,8 @@
     --muted: 220 20% 10%;
     --muted-foreground: 220 15% 65%;
     
-    --accent: 188 85% 45%;
-    --accent-foreground: 220 90% 4%;
+    --accent: 340 82% 67%;
+    --accent-foreground: 267 83% 8%;
     
     --destructive: 0 85% 65%;
     --destructive-foreground: 0 0% 100%;
@@ -127,16 +127,16 @@
     
     --border: 220 30% 15%;
     --input: 220 30% 12%;
-    --ring: 188 85% 45%;
+    --ring: 340 82% 67%;
     
     /* Dark Mode Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(220 90% 15%), hsl(188 85% 25%));
-    --gradient-hero: linear-gradient(135deg, hsl(220 90% 8%) 0%, hsl(260 85% 25%) 50%, hsl(188 85% 25%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(220 50% 8%), hsl(220 30% 12%));
-    --gradient-subtle: linear-gradient(180deg, hsl(220 30% 8%), hsl(220 50% 6%));
+    --gradient-primary: linear-gradient(135deg, hsl(267 83% 35%), hsl(340 82% 45%));
+    --gradient-hero: linear-gradient(135deg, hsl(267 83% 15%) 0%, hsl(340 82% 35%) 50%, hsl(25 95% 55%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(267 50% 8%), hsl(340 30% 12%));
+    --gradient-subtle: linear-gradient(180deg, hsl(267 30% 8%), hsl(340 50% 6%));
     
     /* Dark Mode Shadows */
-    --shadow-glow: 0 0 25px hsl(188 85% 45% / 0.4);
+    --shadow-glow: 0 0 35px hsl(340 82% 67% / 0.5);
   }
 }
 

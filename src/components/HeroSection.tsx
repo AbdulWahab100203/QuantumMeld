@@ -6,28 +6,39 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center hero-gradient overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-20 h-20 bg-accent-teal/20 rounded-full blur-xl animate-pulse" />
-        <div className="absolute top-40 right-20 w-32 h-32 bg-accent-purple/20 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="absolute bottom-40 left-1/4 w-24 h-24 bg-primary/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2s' }} />
+        {/* Animated Orbs */}
+        <div className="absolute top-20 left-10 w-32 h-32 bg-accent-teal/30 rounded-full blur-3xl animate-pulse glow" />
+        <div className="absolute top-40 right-20 w-40 h-40 bg-accent-purple/25 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute bottom-40 left-1/4 w-36 h-36 bg-primary/25 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/2 right-1/4 w-28 h-28 bg-accent-teal/20 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '3s' }} />
         
-        {/* Floating Icons */}
-        <div className="absolute top-32 left-1/4 text-accent-teal/30 animate-bounce" style={{ animationDelay: '0.5s' }}>
-          <Brain size={32} />
+        {/* Floating Geometric Shapes */}
+        <div className="absolute top-32 left-1/4 text-accent-teal/40 animate-bounce hover-lift" style={{ animationDelay: '0.5s' }}>
+          <Brain size={40} />
         </div>
-        <div className="absolute top-48 right-1/3 text-accent-purple/30 animate-bounce" style={{ animationDelay: '1.5s' }}>
-          <Zap size={28} />
+        <div className="absolute top-48 right-1/3 text-accent-purple/40 animate-bounce hover-lift" style={{ animationDelay: '1.5s' }}>
+          <Zap size={36} />
         </div>
-        <div className="absolute bottom-48 right-1/4 text-primary/30 animate-bounce" style={{ animationDelay: '2.5s' }}>
-          <Sparkles size={30} />
+        <div className="absolute bottom-48 right-1/4 text-primary/40 animate-bounce hover-lift" style={{ animationDelay: '2.5s' }}>
+          <Sparkles size={38} />
+        </div>
+        
+        {/* Aesthetic Grid Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 25% 25%, hsl(340 82% 67% / 0.3) 0%, transparent 50%),
+                             radial-gradient(circle at 75% 75%, hsl(267 83% 58% / 0.3) 0%, transparent 50%),
+                             radial-gradient(circle at 50% 50%, hsl(25 95% 70% / 0.3) 0%, transparent 50%)`
+          }} />
         </div>
       </div>
 
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white mb-8 fade-in">
-            <Sparkles size={16} className="mr-2" />
-            <span className="text-sm font-medium">Next-Generation AI Solutions</span>
+          <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/15 backdrop-blur-md border border-white/30 text-white mb-8 fade-in hover-lift glow">
+            <Sparkles size={18} className="mr-3 animate-pulse" />
+            <span className="text-sm font-semibold tracking-wide">✨ Next-Generation AI Solutions</span>
           </div>
 
           {/* Main Heading */}
@@ -45,17 +56,17 @@ const HeroSection = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 fade-in fade-in-delay-3">
-            <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 group">
-              Start Your AI Journey
-              <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12 fade-in fade-in-delay-3">
+            <Button size="lg" className="bg-white text-primary hover:bg-white/95 text-lg px-10 py-7 group hover-lift glow font-semibold">
+              🚀 Start Your AI Journey
+              <ArrowRight size={22} className="ml-3 group-hover:translate-x-2 transition-transform duration-300" />
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-white/30 text-white hover:bg-white/10 text-lg px-8 py-6"
+              className="border-white/40 text-white hover:bg-white/20 text-lg px-10 py-7 backdrop-blur-sm hover-lift font-semibold"
             >
-              Watch Demo
+              ▶️ Watch Demo
             </Button>
           </div>
 
