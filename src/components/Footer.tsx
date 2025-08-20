@@ -18,8 +18,8 @@ const Footer = () => {
     company: [
       { name: 'About Us', href: '/about' },
       { name: 'Services', href: '/services' },
-      { name: 'Products', href: '/products' },
-      { name: 'Blog', href: '/blog' },
+      // { name: 'Products', href: '/products' },
+      // { name: 'Blog', href: '/blog' },
     ],
     solutions: [
       { name: 'LLM Applications', href: '/services#llm' },
@@ -84,7 +84,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3 text-sm">
                 <Phone size={16} className="text-accent-teal" />
-                <span>+1 (555) 123-4567</span>
+                <span>+1 (555) 321-5667</span>
               </div>
               <div className="flex items-center space-x-3 text-sm">
                 <MapPin size={16} className="text-accent-teal" />

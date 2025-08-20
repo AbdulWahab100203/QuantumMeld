@@ -17,36 +17,36 @@ import {
 const About = () => {
   const teamMembers = [
     {
-      name: "Dr. Alex Chen",
-      role: "CEO & Co-Founder",
-      avatar: "AC",
-      bio: "Former AI Research Director at Google. PhD in Machine Learning from Stanford.",
+      name: "Waleed Babar",
+      role: "CEO & Founder",
+      avatar: "WB",
+      bio: "Former Senior Software Engineer at Confiz. Expert in Backend Engineering, Cloud Systems, AI, and Automation.",
       skills: ["AI Strategy", "Machine Learning", "Leadership"],
-      social: { linkedin: "#", twitter: "#", email: "alex@neuraltech.ai" }
+      social: { linkedin: "https://www.linkedin.com/in/waleed-babar-52420b180/", twitter: "", email: "waleedbabar23@gmail.com" }
     },
     {
-      name: "Sarah Rodriguez",
-      role: "CTO & Co-Founder", 
-      avatar: "SR",
-      bio: "Ex-Principal Engineer at OpenAI. Expert in LLM architecture and scaling.",
+      name: "Ammar Ahmad",
+      role: "CTO", 
+      avatar: "AA",
+      bio: "Engineer at OpenAI. Expert in LLM architecture and scaling.",
       skills: ["LLM Development", "System Architecture", "Engineering"],
-      social: { linkedin: "#", twitter: "#", email: "sarah@neuraltech.ai" }
+      social: { linkedin: "https://www.linkedin.com/in/ammar-ahmad-668167274/", twitter: "#", email: "ammarahmad526@gmial.com" }
     },
     {
-      name: "Dr. Michael Park",
+      name: "Ahsan Ayub",
       role: "Head of AI Research",
-      avatar: "MP",
-      bio: "Former Research Scientist at DeepMind. PhD in Cognitive Science from MIT.",
+      avatar: "AA",
+      bio: "Former Research Scientist at DeepMind.",
       skills: ["AI Research", "Agentic Systems", "Neural Networks"],
-      social: { linkedin: "#", twitter: "#", email: "michael@neuraltech.ai" }
+      social: { linkedin: "https://www.linkedin.com/in/ahsan-ayub-360/", twitter: "#", email: "ahsanayub360@gmail.com" }
     },
     {
-      name: "Emma Thompson",
+      name: "Abdul Wahab",
       role: "VP of Product",
-      avatar: "ET",
-      bio: "Former Product Lead at Microsoft AI. Expert in AI product development.",
+      avatar: "AW",
+      bio: "Former Senior Software Engineer. Expert in Backend Engineering, Cloud Systems, AI, and Automation.",
       skills: ["Product Strategy", "UX Design", "AI Ethics"],
-      social: { linkedin: "#", twitter: "#", email: "emma@neuraltech.ai" }
+      social: { linkedin: "https://www.linkedin.com/in/abdul-wahab-4b2614268/", twitter: "#", email: "wahabnadeem0@gmail.com" }
     },
   ];
 
