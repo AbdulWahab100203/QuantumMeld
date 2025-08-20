@@ -14,6 +14,17 @@ import {
   ArrowRight,
   Send
 } from 'lucide-react';
+import { useState } from 'react';
+
+// Add this interface before the Contact component
+interface FormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  company: string;
+  subject: string;
+  message: string;
+}
 
 const Contact = () => {
   const contactInfo = [
@@ -51,10 +62,62 @@ const Contact = () => {
     },
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [formData, setFormData] = useState<FormData>({
+    firstName: '',
+    lastName: '',
+    email: '',
+    company: '',
+    subject: '',
+    message: ''
+  });
+
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState(false);
+
+  const CONTACT_ENDPOINT = (import.meta as any).env?.VITE_CONTACT_ENDPOINT || '/api/contact';
+
+  // Add this handler for input changes
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.id]: e.target.value
+    }));
+  };
+
+  // Update the handleSubmit function
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted');
+    setIsLoading(true);
+    setError(null);
+
+    try {
+      const response = await fetch(CONTACT_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
+      setSuccess(true);
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        company: '',
+        subject: '',
+        message: ''
+      });
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Something went wrong');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -123,18 +186,22 @@ const Contact = () => {
                           <Label htmlFor="firstName">First Name</Label>
                           <Input 
                             id="firstName" 
-                            placeholder="John" 
+                            placeholder="firstName" 
                             required 
                             className="mt-1"
+                            value={formData.firstName}
+                            onChange={handleInputChange}
                           />
                         </div>
                         <div>
                           <Label htmlFor="lastName">Last Name</Label>
                           <Input 
                             id="lastName" 
-                            placeholder="Doe" 
+                            placeholder="lastName" 
                             required 
                             className="mt-1"
+                            value={formData.lastName}
+                            onChange={handleInputChange}
                           />
                         </div>
                       </div>
@@ -144,9 +211,11 @@ const Contact = () => {
                         <Input 
                           id="email" 
                           type="email" 
-                          placeholder="john@company.com" 
+                          placeholder="abc@gmail.com" 
                           required 
                           className="mt-1"
+                          value={formData.email}
+                          onChange={handleInputChange}
                         />
                       </div>
 
@@ -156,6 +225,8 @@ const Contact = () => {
                           id="company" 
                           placeholder="Your Company Name" 
                           className="mt-1"
+                          value={formData.company}
+                          onChange={handleInputChange}
                         />
                       </div>
 
@@ -166,6 +237,8 @@ const Contact = () => {
                           placeholder="How can we help you?" 
                           required 
                           className="mt-1"
+                          value={formData.subject}
+                          onChange={handleInputChange}
                         />
                       </div>
 
@@ -177,11 +250,23 @@ const Contact = () => {
                           rows={5}
                           required 
                           className="mt-1"
+                          value={formData.message}
+                          onChange={handleInputChange}
                         />
                       </div>
 
-                      <Button type="submit" size="lg" className="w-full btn-hero text-lg py-6">
-                        Send Message
+                      {isLoading && <p>Sending...</p>}
+                      {error && <p className="text-red-500">{error}</p>}
+                      {success && <p className="text-green-500">Message sent successfully!</p>}
+
+                      {/* Update your submit button */}
+                      <Button 
+                        type="submit" 
+                        size="lg" 
+                        className="w-full btn-hero text-lg py-6"
+                        disabled={isLoading}
+                      >
+                        {isLoading ? 'Sending...' : 'Send Message'}
                         <Send size={20} className="ml-2" />
                       </Button>
                     </form>
