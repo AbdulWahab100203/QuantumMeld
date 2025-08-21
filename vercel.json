@@ -1,0 +1,10 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "https://3ba345ab7d14.ngrok-free.app/$1" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
+
+
