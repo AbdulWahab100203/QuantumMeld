@@ -29,7 +29,7 @@ const Products = () => {
       color: 'text-accent-teal',
       bgColor: 'bg-accent-teal/10',
       borderColor: 'border-accent-teal/20',
-      image: '/products/neuralchat.jpg',
+      // image: '/products/neuralchat.jpg',
       featured: true,
     },
     {

@@ -1,7 +1,9 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Sparkles, Zap, Brain } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const HeroSection = () => {
+  const navigate = useNavigate();
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-slate-900 via-indigo-950 to-slate-900 overflow-hidden">
       {/* Background Effects */}
@@ -57,7 +59,7 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12 fade-in fade-in-delay-3">
-            <Button size="lg" className="bg-white text-primary hover:bg-white/95 text-lg px-10 py-7 group hover-lift glow font-semibold">
+            <Button size="lg" className="bg-white text-primary hover:bg-white/95 text-lg px-10 py-7 group hover-lift glow font-semibold" onClick={() => navigate('/contact')}>
               🚀 Start Your AI Journey
               <ArrowRight size={22} className="ml-3 group-hover:translate-x-2 transition-transform duration-300" />
             </Button>

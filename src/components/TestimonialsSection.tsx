@@ -13,7 +13,7 @@ const TestimonialsSection = () => {
       company: "TechFlow Inc",
       avatar: "SC",
       rating: 5,
-      content: "NeuralTech's LLM application transformed our customer support. We saw a 70% reduction in response time and 95% customer satisfaction rate.",
+      content: "Quantummeld's LLM application transformed our customer support. We saw a 70% reduction in response time and 95% customer satisfaction rate.",
     },
     {
       name: "Marcus Rodriguez",
@@ -37,7 +37,7 @@ const TestimonialsSection = () => {
       company: "FutureVision",
       avatar: "DP",
       rating: 5,
-      content: "Working with NeuralTech was exceptional. They delivered a custom AI solution that exceeded all our requirements and timelines.",
+      content: "Working with Quantummeld was exceptional. They delivered a custom AI solution that exceeded all our requirements and timelines.",
     },
   ];
 

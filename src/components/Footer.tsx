@@ -69,9 +69,9 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center space-x-3 mb-6">
               <div className="w-10 h-10 bg-gradient-to-br from-accent-purple to-accent-teal rounded-xl flex items-center justify-center shadow-md">
-                <span className="text-white font-bold">AI</span>
+                <span className="text-white font-bold">QM</span>
               </div>
-              <span className="text-2xl font-bold text-gradient">NeuralTech</span>
+              <span className="text-2xl font-bold text-gradient">Quantummeld</span>
             </Link>
             <p className="text-muted-foreground mb-6 max-w-sm">
               Leading the future of AI technology with innovative LLM applications, 
@@ -80,7 +80,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-sm">
                 <Mail size={16} className="text-accent-teal" />
-                <span>contact@neuraltech.ai</span>
+                <span>quantummeld23@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3 text-sm">
                 <Phone size={16} className="text-accent-teal" />
@@ -148,7 +148,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t">
           <p className="text-muted-foreground text-sm mb-4 md:mb-0">
-            © {currentYear} NeuralTech. All rights reserved.
+            © {currentYear} Quantummeld. All rights reserved.
           </p>
           
           {/* Social Links */}

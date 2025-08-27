@@ -9,8 +9,10 @@ import {
   Workflow,
   BarChart3
 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const ServicesOverview = () => {
+  const navigate = useNavigate();
   const services = [
     {
       icon: MessageSquare,
@@ -108,10 +110,11 @@ const ServicesOverview = () => {
           <p className="text-lg text-muted-foreground mb-6">
             Ready to transform your business with AI?
           </p>
-          <Button size="lg" className="btn-hero text-lg px-8 py-6">
+          <Button size="lg" className="btn-hero text-lg px-8 py-6" onClick={() => navigate('/contact')}>
             Get Started Today
             <ArrowRight size={20} className="ml-2" />
           </Button>
+          
         </div>
       </div>
     </section>

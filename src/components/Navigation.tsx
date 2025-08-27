@@ -3,12 +3,13 @@ import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useNavigate } from 'react-router-dom';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
-
+  const navigate = useNavigate();
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -37,9 +38,9 @@ const Navigation = () => {
           {/* Logo */}
             <Link to="/" className="flex items-center space-x-3">
               <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-cyan-400 rounded-lg flex items-center justify-center shadow-md">
-              <span className="text-white font-bold text-sm">AI</span>
+              <span className="text-white font-bold text-sm">QM</span>
             </div>
-            <span className="text-xl font-bold text-gradient">NeuralTech</span>
+            <span className="text-xl font-bold text-gradient">QuantumMeld</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -61,7 +62,7 @@ const Navigation = () => {
                 )}
               </Link>
             ))}
-            <Button variant="default" className="btn-hero">
+            <Button variant="default" className="btn-hero" onClick={() => navigate('/contact')}>
               Get Started
             </Button>
           </div>
@@ -96,7 +97,7 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
-              <Button variant="default" className="btn-hero w-full mt-4">
+              <Button variant="default" className="btn-hero w-full mt-4" onClick={() => navigate('/contact')}>
                 Get Started
               </Button>
             </div>
