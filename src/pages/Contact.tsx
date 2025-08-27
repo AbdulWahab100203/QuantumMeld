@@ -31,7 +31,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      details: 'quantummeld23@gmail.com',
+      details: 'info@quantummeld.co',
       description: 'Send us an email and we\'ll respond within 24 hours',
       color: 'text-accent-teal',
       bgColor: 'bg-accent-teal/10',
