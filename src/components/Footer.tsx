@@ -80,7 +80,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-sm">
                 <Mail size={16} className="text-accent-teal" />
-                <span>quantummeld23@gmail.com</span>
+                <span>info@quantummeld.co</span>
               </div>
               <div className="flex items-center space-x-3 text-sm">
                 <Phone size={16} className="text-accent-teal" />
