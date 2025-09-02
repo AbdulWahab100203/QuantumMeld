@@ -37,7 +37,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
             <Link to="/" className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br  rounded-lg flex items-center justify-center shadow-md">
+              <div className="w-10 h-10   rounded-lg flex items-center justify-center shadow-md">
                 <img src="public\logo.png" alt="" />
               {/* <span className="text-white font-bold text-sm">QM</span> */}
             </div>
