@@ -38,7 +38,7 @@ const Navigation = () => {
           {/* Logo */}
             <Link to="/" className="flex items-center space-x-3">
               <div className="w-10 h-10   rounded-lg flex items-center justify-center shadow-md">
-                <img src="public\logo.png" alt="" />
+                <img src="/logo.png" alt="" />
               {/* <span className="text-white font-bold text-sm">QM</span> */}
             </div>
             <span className="text-xl font-bold text-gradient from-blue-600 to-cyan-400">QuantumMeld</span>
