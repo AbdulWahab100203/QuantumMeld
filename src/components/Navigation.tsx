@@ -37,10 +37,11 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
             <Link to="/" className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-cyan-400 rounded-lg flex items-center justify-center shadow-md">
-              <span className="text-white font-bold text-sm">QM</span>
+              <div className="w-10 h-10 bg-gradient-to-br  rounded-lg flex items-center justify-center shadow-md">
+                <img src="public\logo.png" alt="" />
+              {/* <span className="text-white font-bold text-sm">QM</span> */}
             </div>
-            <span className="text-xl font-bold text-gradient">QuantumMeld</span>
+            <span className="text-xl font-bold text-gradient from-blue-600 to-cyan-400">QuantumMeld</span>
           </Link>
 
           {/* Desktop Navigation */}
