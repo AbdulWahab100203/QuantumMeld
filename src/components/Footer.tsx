@@ -71,7 +71,7 @@ const Footer = () => {
             <div className="w-10 h-10   rounded-lg flex items-center justify-center shadow-md">
             <img src="/logo.png" alt="" />
               </div>
-              <span className="text-2xl font-bold text-gradient">Quantummeld</span>
+              <span className="text-2xl font-bold text-gradient">QuantumMeld</span>
             </Link>
             <p className="text-muted-foreground mb-6 max-w-sm">
               Leading the future of AI technology with innovative LLM applications, 
@@ -148,7 +148,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t">
           <p className="text-muted-foreground text-sm mb-4 md:mb-0">
-            © {currentYear} Quantummeld. All rights reserved.
+            © {currentYear} QuantumMeld. All rights reserved.
           </p>
           
           {/* Social Links */}

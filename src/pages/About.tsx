@@ -78,7 +78,7 @@ const About = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 fade-in">
-              About <span className="text-gradient">Quantummeld</span>
+              About <span className="text-gradient">QuantumMeld</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed fade-in fade-in-delay-1">
               We're a team of AI pioneers, researchers, and engineers dedicated to building 

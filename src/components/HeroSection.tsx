@@ -1,9 +1,12 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Sparkles, Zap, Brain } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { Dialog, DialogContent } from '@/components/ui/dialog';
+import { useState } from 'react';
 
 const HeroSection = () => {
   const navigate = useNavigate();
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-slate-900 via-indigo-950 to-slate-900 overflow-hidden">
       {/* Background Effects */}
@@ -67,10 +70,26 @@ const HeroSection = () => {
               size="lg" 
               variant="outline" 
               className="border-white/40 text-black hover:bg-white/20 text-lg px-10 py-7 backdrop-blur-sm hover-lift font-semibold"
+              onClick={() => setIsVideoOpen(true)}
             >
-              ▶️ Watch Demo
+              ▶️ Watch Agentic Demo
             </Button>
           </div>
+
+          <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
+            <DialogContent className="max-w-3xl p-0 overflow-hidden">
+              <div className="aspect-video w-full">
+                <video
+                  className="w-full h-full"
+                  src="/demo%20video.mp4"
+                  controls
+                  autoPlay
+                  muted
+                  playsInline
+                />
+              </div>
+            </DialogContent>
+          </Dialog>
 
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-6 pb-6 border-t border-white/20 fade-in fade-in-delay-4">
