@@ -68,8 +68,8 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-accent-purple to-accent-teal rounded-xl flex items-center justify-center shadow-md">
-                <span className="text-white font-bold">QM</span>
+            <div className="w-10 h-10   rounded-lg flex items-center justify-center shadow-md">
+            <img src="/logo.png" alt="" />
               </div>
               <span className="text-2xl font-bold text-gradient">Quantummeld</span>
             </Link>
