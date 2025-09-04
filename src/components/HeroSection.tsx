@@ -44,7 +44,7 @@ const HeroSection = () => {
           </div> */}
 
           {/* Main Heading */}
-          <h1 className="text-5xl mt-10 md:text-7xl font-bold text-white mb-6 fade-in fade-in-delay-1">
+          <h1 className="text-5xl mt-10 md:text-7xl font-bold text-white mb-6 fade-in fade-in-delay-1 mt-20">
             Transform Your Business with{' '}
             <span className="text-transparent bg-gradient-to-r from-accent-teal to-accent-purple bg-clip-text">
               Intelligent AI
@@ -73,7 +73,7 @@ const HeroSection = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 border-t border-white/20 fade-in fade-in-delay-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-6 pb-6 border-t border-white/20 fade-in fade-in-delay-4">
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">500+</div>
               <div className="text-white/70">AI Solutions Deployed</div>
