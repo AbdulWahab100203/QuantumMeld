@@ -94,7 +94,7 @@ const HeroSection = () => {
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-6 pb-6 border-t border-white/20 fade-in fade-in-delay-4">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">500+</div>
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">100+</div>
               <div className="text-white/70">AI Solutions Deployed</div>
             </div>
             <div className="text-center">

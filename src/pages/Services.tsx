@@ -20,121 +20,76 @@ import {
 const Services = () => {
   const services = [
     {
-      id: 'llm',
-      icon: MessageSquare,
-      title: 'LLM-based Applications',
-      description: 'Custom large language model applications that transform how your business communicates and processes information.',
+      id: 'cloud-devops',
+      icon: Cloud,
+      title: 'Cloud Solutions & DevOps',
+      description: 'Accelerate your digital journey with secure, scalable, and automated cloud solutions.',
       color: 'text-accent-teal',
       bgColor: 'bg-accent-teal/10',
       borderColor: 'border-accent-teal/20',
       features: [
-        {
-          icon: Bot,
-          name: 'Intelligent Chatbots',
-          description: 'AI-powered conversational interfaces that understand context and provide accurate responses.'
-        },
-        {
-          icon: Brain,
-          name: 'AI Copilots',
-          description: 'Assistant applications that help users complete complex tasks with AI guidance.'
-        },
-        {
-          icon: Cpu,
-          name: 'Content Generation',
-          description: 'Automated content creation systems for marketing, documentation, and communication.'
-        },
-        {
-          icon: BarChart3,
-          name: 'Document Analysis',
-          description: 'Intelligent document processing and insights extraction from unstructured data.'
-        }
+        { icon: Cloud, name: 'Cloud Migration (AWS, Azure, GCP)', description: 'Migrate workloads with zero-downtime strategies and cost optimization.' },
+        { icon: GitBranch, name: 'Hybrid & Multi-Cloud Management', description: 'Unified governance, monitoring, and orchestration across clouds.' },
+        { icon: Cpu, name: 'Kubernetes & Orchestration', description: 'Production-ready clusters with autoscaling, GitOps and observability.' },
+        { icon: Zap, name: 'Serverless Architectures', description: 'Event-driven apps using AWS Lambda and Azure Functions.' },
+        { icon: Workflow, name: 'CI/CD & IaC', description: 'Automated pipelines with Terraform, Pulumi, and GitHub Actions.' },
+        { icon: Shield, name: 'Cloud Security & Compliance', description: 'Best-practice hardening, IAM, and compliance frameworks.' },
       ],
       useCases: [
-        'Customer Support Automation',
-        'Internal Knowledge Management',
-        'Content Marketing at Scale',
-        'Legal Document Review',
-        'Technical Documentation'
+        'Cost-optimized cloud modernization',
+        'Highly-available microservices on Kubernetes',
+        'Zero-downtime release automation',
       ],
-      technologies: ['GPT-4', 'Claude', 'LLaMA', 'Custom Fine-tuning', 'RAG Systems']
+      technologies: ['AWS', 'Azure', 'GCP', 'Kubernetes', 'Terraform', 'GitHub Actions']
     },
     {
-      id: 'agentic',
-      icon: GitBranch,
-      title: 'Agentic AI Applications',
-      description: 'Autonomous AI agents that can reason, plan, and execute complex workflows without human intervention.',
-      color: 'text-accent-purple',
-      bgColor: 'bg-accent-purple/10',
-      borderColor: 'border-accent-purple/20',
-      features: [
-        {
-          icon: Workflow,
-          name: 'Autonomous Workflows',
-          description: 'Self-managing processes that adapt and optimize based on real-time conditions.'
-        },
-        {
-          icon: Brain,
-          name: 'Decision Making',
-          description: 'AI agents that can analyze situations and make informed decisions independently.'
-        },
-        {
-          icon: GitBranch,
-          name: 'Multi-System Integration',
-          description: 'Seamless integration across multiple platforms and data sources.'
-        },
-        {
-          icon: Zap,
-          name: 'Task Automation',
-          description: 'Complete automation of complex business processes end-to-end.'
-        }
-      ],
-      useCases: [
-        'Supply Chain Optimization',
-        'Financial Trading Systems',
-        'Healthcare Diagnosis Assistance',
-        'Cybersecurity Monitoring',
-        'Predictive Maintenance'
-      ],
-      technologies: ['AutoGPT', 'LangChain', 'CrewAI', 'Multi-Agent Systems', 'Reinforcement Learning']
-    },
-    {
-      id: 'saas',
-      icon: Cloud,
-      title: 'SaaS Platforms',
-      description: 'Scalable software-as-a-service solutions with integrated AI capabilities for enterprise customers.',
+      id: 'software-automation',
+      icon: Workflow,
+      title: 'Software Development & Automation',
+      description: 'We build intelligent, automated, and future-ready applications tailored to your business.',
       color: 'text-primary',
       bgColor: 'bg-primary/10',
       borderColor: 'border-primary/20',
       features: [
-        {
-          icon: BarChart3,
-          name: 'Analytics Dashboards',
-          description: 'Real-time insights and predictive analytics powered by AI algorithms.'
-        },
-        {
-          icon: Users,
-          name: 'Multi-tenant Architecture',
-          description: 'Secure, scalable platforms supporting thousands of concurrent users.'
-        },
-        {
-          icon: Shield,
-          name: 'Enterprise Security',
-          description: 'Bank-grade security with compliance for GDPR, HIPAA, and SOX.'
-        },
-        {
-          icon: Cpu,
-          name: 'API-First Design',
-          description: 'Comprehensive APIs for seamless integration with existing systems.'
-        }
+        { icon: Cpu, name: 'Custom Web & Mobile Applications', description: 'Robust, scalable apps with modern UX and API-first design.' },
+        { icon: Users, name: 'SaaS Product Development', description: 'Multi-tenant SaaS with billing, auth, and analytics.' },
+        { icon: MessageSquare, name: 'API Development & Integration', description: 'Secure REST/GraphQL APIs with SSO and rate limiting.' },
+        { icon: Workflow, name: 'Workflow Automation (n8n, Make, Zapier)', description: 'Automate repetitive processes and integrate your tools.' },
+        { icon: GitBranch, name: 'Custom VAPI Integrations', description: 'Reliable connectivity with third-party vendors and platforms.' },
+        { icon: ArrowRight, name: 'Low-Code/No-Code Apps', description: 'Rapid delivery using platforms while preserving quality.' },
+        { icon: GitBranch, name: 'Microservices & Legacy Modernization', description: 'Decompose monoliths and modernize critical systems.' },
       ],
       useCases: [
-        'Business Intelligence Platforms',
-        'Customer Relationship Management',
-        'Human Resources Management',
-        'Financial Analysis Tools',
-        'Marketing Automation'
+        'SaaS MVP to enterprise scale-up',
+        'Back-office automation and integration',
+        'Legacy system rewrite and migration',
       ],
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'Redis', 'Kubernetes', 'AWS/Azure']
+      technologies: ['React', 'Node.js', 'PostgreSQL', 'Redis', 'n8n', 'Zapier']
+    },
+    {
+      id: 'ai-data-agentic',
+      icon: Brain,
+      title: 'AI, Data & Agentic Intelligence',
+      description: 'Leverage the power of AI to create autonomous, reasoning-driven systems that transform operations.',
+      color: 'text-accent-purple',
+      bgColor: 'bg-accent-purple/10',
+      borderColor: 'border-accent-purple/20',
+      features: [
+        { icon: Workflow, name: 'LangChain & LangGraph Pipelines', description: 'Composable chains, tools and graphs for complex reasoning.' },
+        { icon: GitBranch, name: 'Agentic AI Development', description: 'Autonomous agents that plan, decide and act safely.' },
+        { icon: MessageSquare, name: 'Calling & Conversational AI', description: 'Voice + multimodal agents for natural interactions.' },
+        { icon: Bot, name: 'Retrieval-Augmented Generation (RAG)', description: 'Private, grounded responses over your data sources.' },
+        { icon: BarChart3, name: 'Predictive Analytics & Forecasting', description: 'ML models for demand, risk and performance.' },
+        { icon: Cpu, name: 'Generative AI (Content & Code)', description: 'Text, image and code generation with guardrails.' },
+        { icon: Brain, name: 'CV & NLP Systems', description: 'Computer vision and language understanding solutions.' },
+        { icon: Shield, name: 'AI Ops – Intelligent IT Response', description: 'Proactive monitoring, anomaly detection and remediation.' },
+      ],
+      useCases: [
+        'Knowledge assistants over enterprise data',
+        'Autonomous customer support and operations',
+        'Forecasting and anomaly detection in real time',
+      ],
+      technologies: ['LangChain', 'LangGraph', 'OpenAI', 'RAG', 'Vector DBs', 'PyTorch']
     }
   ];
 
