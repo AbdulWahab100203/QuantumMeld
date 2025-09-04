@@ -205,7 +205,7 @@
   /* Button Variants */
   .btn-hero {
     background: var(--gradient-primary);
-    color: hsl(var(--primary-foreground));
+    color: hsl(0, 3%, 93%);
     transition: var(--transition-smooth);
   }
   
