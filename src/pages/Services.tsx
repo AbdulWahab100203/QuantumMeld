@@ -192,12 +192,12 @@ const Services = () => {
               </div>
 
               {/* CTA */}
-              <div className="text-center mt-12 fade-in fade-in-delay-5">
+              {/* <div className="text-center mt-12 fade-in fade-in-delay-5">
                 <Button size="lg" className="btn-hero text-lg px-8 py-6">
                   Learn More About {service.title}
                   <ArrowRight size={20} className="ml-2" />
                 </Button>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
