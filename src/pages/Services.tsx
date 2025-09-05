@@ -20,6 +20,31 @@ import {
 const Services = () => {
   const services = [
     {
+      id: 'ai-data-agentic',
+      icon: Brain,
+      title: 'AI, Data & Agentic Intelligence',
+      description: 'Leverage the power of AI to create autonomous, reasoning-driven systems that transform operations.',
+      color: 'text-accent-purple',
+      bgColor: 'bg-accent-purple/10',
+      borderColor: 'border-accent-purple/20',
+      features: [
+        { icon: Workflow, name: 'LangChain & LangGraph Pipelines', description: 'Composable chains, tools and graphs for complex reasoning.' },
+        { icon: GitBranch, name: 'Agentic AI Development', description: 'Autonomous agents that plan, decide and act safely.' },
+        { icon: MessageSquare, name: 'Calling & Conversational AI', description: 'Voice + multimodal agents for natural interactions.' },
+        { icon: Bot, name: 'Retrieval-Augmented Generation (RAG)', description: 'Private, grounded responses over your data sources.' },
+        { icon: BarChart3, name: 'Predictive Analytics & Forecasting', description: 'ML models for demand, risk and performance.' },
+        { icon: Cpu, name: 'Generative AI (Content & Code)', description: 'Text, image and code generation with guardrails.' },
+        { icon: Brain, name: 'CV & NLP Systems', description: 'Computer vision and language understanding solutions.' },
+        { icon: Shield, name: 'AI Ops – Intelligent IT Response', description: 'Proactive monitoring, anomaly detection and remediation.' },
+      ],
+      useCases: [
+        'Knowledge assistants over enterprise data',
+        'Autonomous customer support and operations',
+        'Forecasting and anomaly detection in real time',
+      ],
+      technologies: ['LangChain', 'LangGraph', 'OpenAI', 'RAG', 'Vector DBs', 'PyTorch']
+    },
+    {
       id: 'cloud-devops',
       icon: Cloud,
       title: 'Cloud Solutions & DevOps',
@@ -66,31 +91,7 @@ const Services = () => {
       ],
       technologies: ['React', 'Node.js', 'PostgreSQL', 'Redis', 'n8n', 'Zapier']
     },
-    {
-      id: 'ai-data-agentic',
-      icon: Brain,
-      title: 'AI, Data & Agentic Intelligence',
-      description: 'Leverage the power of AI to create autonomous, reasoning-driven systems that transform operations.',
-      color: 'text-accent-purple',
-      bgColor: 'bg-accent-purple/10',
-      borderColor: 'border-accent-purple/20',
-      features: [
-        { icon: Workflow, name: 'LangChain & LangGraph Pipelines', description: 'Composable chains, tools and graphs for complex reasoning.' },
-        { icon: GitBranch, name: 'Agentic AI Development', description: 'Autonomous agents that plan, decide and act safely.' },
-        { icon: MessageSquare, name: 'Calling & Conversational AI', description: 'Voice + multimodal agents for natural interactions.' },
-        { icon: Bot, name: 'Retrieval-Augmented Generation (RAG)', description: 'Private, grounded responses over your data sources.' },
-        { icon: BarChart3, name: 'Predictive Analytics & Forecasting', description: 'ML models for demand, risk and performance.' },
-        { icon: Cpu, name: 'Generative AI (Content & Code)', description: 'Text, image and code generation with guardrails.' },
-        { icon: Brain, name: 'CV & NLP Systems', description: 'Computer vision and language understanding solutions.' },
-        { icon: Shield, name: 'AI Ops – Intelligent IT Response', description: 'Proactive monitoring, anomaly detection and remediation.' },
-      ],
-      useCases: [
-        'Knowledge assistants over enterprise data',
-        'Autonomous customer support and operations',
-        'Forecasting and anomaly detection in real time',
-      ],
-      technologies: ['LangChain', 'LangGraph', 'OpenAI', 'RAG', 'Vector DBs', 'PyTorch']
-    }
+    
   ];
 
   return (
@@ -212,9 +213,14 @@ const Services = () => {
             Let's discuss how our AI solutions can solve your specific challenges and drive growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6">
-              Schedule Consultation
-            </Button>
+          <Button 
+            size="lg" 
+            className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6" 
+            onClick={() => window.open("https://calendly.com/quantummeld23/30min", "_blank")}
+          >
+            Schedule Consultation
+          </Button>
+
             <Button 
               size="lg" 
               variant="outline" 

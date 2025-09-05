@@ -281,7 +281,7 @@ const Contact = () => {
                   <CardContent className="p-6">
                     <h3 className="text-xl font-bold mb-4">Quick Actions</h3>
                     <div className="space-y-3">
-                      <Button variant="outline" size="lg" className="w-full justify-start">
+                      <Button variant="outline" size="lg" className="w-full justify-start" onClick={() => window.open("https://calendly.com/quantummeld23/30min", "_blank")}>
                         <Calendar size={20} className="mr-3" />
                         Schedule a Consultation
                         <ArrowRight size={16} className="ml-auto" />
