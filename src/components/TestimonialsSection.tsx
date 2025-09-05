@@ -81,7 +81,7 @@ const TestimonialsSection = () => {
             >
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="w-full flex-shrink-0 px-4">
-                  <Card className="card-gradient border-0 shadow-xl">
+                  <Card className="bg-white border-0 shadow-xl">
                     <CardContent className="p-8 text-center">
                       {/* Quote Icon */}
                       <div className="flex justify-center mb-6">
