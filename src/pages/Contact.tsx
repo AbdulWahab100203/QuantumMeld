@@ -14,7 +14,7 @@ import {
   ArrowRight,
   Send
 } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 // Add this interface before the Contact component
 interface FormData {
@@ -74,8 +74,43 @@ const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
+  const [recaptchaToken, setRecaptchaToken] = useState<string>('');
+  const recaptchaContainerRef = useRef<HTMLDivElement | null>(null);
 
   const CONTACT_ENDPOINT = (import.meta as any).env?.VITE_CONTACT_ENDPOINT || '/api/contact';
+
+  // Render Google reCAPTCHA v2 checkbox when API is available
+  useEffect(() => {
+    const host = typeof window !== 'undefined' ? window.location.hostname : '';
+    const envSiteKey = (import.meta as any).env?.VITE_RECAPTCHA_SITE_KEY as string | undefined;
+    const envDevSiteKey = (import.meta as any).env?.VITE_RECAPTCHA_SITE_KEY_DEV as string | undefined;
+    const siteKey = (host === 'localhost' || host === '127.0.0.1')
+      ? (envDevSiteKey || envSiteKey || '6LcpSMIrAAAAACzBUtT-eeKBwnDqblQY5B1P7mm8')
+      : (envSiteKey || '6LcpSMIrAAAAACzBUtT-eeKBwnDqblQY5B1P7mm8');
+
+    const tryRenderRecaptcha = () => {
+      const grecaptcha = (window as any).grecaptcha;
+      if (grecaptcha && recaptchaContainerRef.current && recaptchaContainerRef.current.childElementCount === 0) {
+        grecaptcha.render(recaptchaContainerRef.current, {
+          sitekey: siteKey,
+          callback: (token: string) => setRecaptchaToken(token),
+          'expired-callback': () => setRecaptchaToken(''),
+          'error-callback': () => setRecaptchaToken(''),
+        });
+        return true;
+      }
+      return false;
+    };
+
+    if (!tryRenderRecaptcha()) {
+      const intervalId = setInterval(() => {
+        if (tryRenderRecaptcha()) {
+          clearInterval(intervalId);
+        }
+      }, 400);
+      return () => clearInterval(intervalId);
+    }
+  }, []);
 
   // Add this handler for input changes
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -92,12 +127,19 @@ const Contact = () => {
     setError(null);
 
     try {
+      if (!recaptchaToken) {
+        throw new Error('Please complete the reCAPTCHA to continue.');
+      }
+
       const response = await fetch(CONTACT_ENDPOINT, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify({
+          ...formData,
+          'g-recaptcha-response': recaptchaToken,
+        })
       });
 
       if (!response.ok) {
@@ -113,6 +155,7 @@ const Contact = () => {
         subject: '',
         message: ''
       });
+      setRecaptchaToken('');
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Something went wrong');
     } finally {
@@ -260,6 +303,9 @@ const Contact = () => {
                       {success && <p className="text-green-500">Message sent successfully!</p>}
 
                       {/* Update your submit button */}
+                      <div className="pt-2">
+                        <div ref={recaptchaContainerRef} className="g-recaptcha"></div>
+                      </div>
                       <Button 
                         type="submit" 
                         size="lg" 
